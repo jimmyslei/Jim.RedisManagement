@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>jimmy</Authors>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Title>Jim.redisMamagement</Title>
     <PackageIcon>tglw7-8i46t.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -16,7 +16,8 @@
     <RepositoryUrl>https://github.com/jimmyslei/Jim.RedisManagement.git</RepositoryUrl>
     <Description>封装的 redis 缓存相关方法
 包含 常用的key-value，发布订阅，分布式锁</Description>
-    <PackageProjectUrl>https://jimmyslei.github.io/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jimmyslei/Jim.RedisManagement.git</PackageProjectUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
