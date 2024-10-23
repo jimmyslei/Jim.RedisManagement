@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>jimmy</Authors>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Title>Jim.redisMamagement</Title>
     <PackageIcon>tglw7-8i46t.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
