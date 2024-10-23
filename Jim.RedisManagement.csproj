@@ -16,7 +16,8 @@
     <RepositoryUrl>https://github.com/jimmyslei/Jim.RedisManagement.git</RepositoryUrl>
     <Description>封装的 redis 缓存相关方法
 包含 常用的key-value，发布订阅，分布式锁</Description>
-    <PackageProjectUrl>https://jimmyslei.github.io/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jimmyslei/Jim.RedisManagement.git</PackageProjectUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
