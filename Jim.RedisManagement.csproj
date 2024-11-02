@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>jimmy</Authors>
+    <Authors>jimmyLei</Authors>
     <Version>0.0.2</Version>
     <Title>Jim.redisMamagement</Title>
     <PackageIcon>tglw7-8i46t.jpg</PackageIcon>
