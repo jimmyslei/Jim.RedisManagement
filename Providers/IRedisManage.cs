@@ -776,6 +776,11 @@ public interface IRedisManage
     /// <returns></returns>
     Task RemoveByKey(string key);
 
+    /// <summary>
+    /// 执行Lua脚本
+    /// </summary>
+    Task<T> ExecuteLuaScriptAsync<T>(string script, RedisKey[] keys, RedisValue[] values);
+
     #endregion 其他
 
     #region 分布式锁

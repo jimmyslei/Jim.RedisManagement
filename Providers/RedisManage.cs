@@ -1552,7 +1552,8 @@ internal sealed class RedisManage : IRedisManage
     /// <returns></returns>
     public async Task RemoveByKey(string key)
     {
-        var redisResult = await _redisConnection.GetDatabase().ScriptEvaluateAsync(LuaScript.Prepare(
+        var db = GetDatabase();
+        var redisResult = await db.ScriptEvaluateAsync(LuaScript.Prepare(
             //模糊查询：
             " local res = redis.call('KEYS', @keypattern) " +
             " return res "), new { @keypattern = key });
@@ -1561,8 +1562,28 @@ internal sealed class RedisManage : IRedisManage
         {
             var keys = (string[])redisResult;
             foreach (var k in keys)
-                _redisConnection.GetDatabase().KeyDelete(k);
+                db.KeyDelete(k);
         }
+    }
+
+    /// <summary>
+    /// 执行Lua脚本
+    /// </summary>
+    public async Task<T> ExecuteLuaScriptAsync<T>(string script, RedisKey[] keys, RedisValue[] values)
+    {
+        var db = GetDatabase();
+        var result = await db.ScriptEvaluateAsync(script, keys, values);
+
+        if (typeof(T) == typeof(long))
+            return (T)(object)(long)result;
+        if (typeof(T) == typeof(string))
+            return (T)(object)(string)result;
+        if (typeof(T) == typeof(bool))
+            return (T)(object)(bool)result;
+        if (typeof(T) == typeof(double))
+            return (T)(object)(double)result;
+
+        return (T)(object)result;
     }
 
     #endregion 其他
